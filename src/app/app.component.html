@@ -1,2 +1,10 @@
-<h1>hello world</h1>
 
+
+<br>
+<input *ngIf='editMode' type="text" [(ngModel)]="name" />
+<br>
+<button *ngIf='!editMode' (click)='startEdit()'>Edit</button>
+<button *ngIf='editMode' (click)='save()'>Save</button><br>
+<button *ngIf='editMode' (click)='cancel()'>Cancel</button>`
+
+<div>{{name}}</div>
